@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BillBot India - Zero-Friction WhatsApp Commerce & Automated GST Invoicing</title>
+  <meta name="description" content="Turn WhatsApp into your automated B2B/B2C store. Instant catalog search, Meta UPI payments, and automated GST PDF invoices on Cloudflare Workers edge.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 2.17.69 4.19 1.86 5.85L2.5 21.5l3.8-1.32C7.9 21.34 9.88 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+        </svg>
+        BillBot India
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#demo">Live Demo</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="https://wa.me/15556735310?text=HI" class="btn btn-primary" target="_blank">Start on WhatsApp</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">⚡ Powered by Cloudflare Workers & Meta Cloud API</div>
+          <h1>Turn WhatsApp into an <span class="gradient-text">Automated Sales Machine</span></h1>
+          <p>Zero apps to download. Merchants register in 60 seconds, customers browse catalogs, order via AI search, pay via Meta UPI, and receive instant GST PDF invoices right inside WhatsApp.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/15556735310?text=HI" class="btn btn-primary" target="_blank">
+              🚀 Try Live Bot Demo
+            </a>
+            <a href="#how-it-works" class="btn btn-outline">
+              Learn Merchant Setup
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/hero-banner.png" alt="BillBot India WhatsApp Commerce Platform Banner">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merchant & Customer Workflow Section -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for Indian Merchants & Everyday Buyers</h2>
+        <p>A completely frictionless B2B2C ecosystem operating on the world's favorite messaging app.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Merchant Onboarding -->
+        <div class="glass-card step-card">
+          <div class="step-number">1</div>
+          <h3>Merchant 60-Second Setup</h3>
+          <p>Scan your unique store QR code or text <strong>"HI"</strong> on WhatsApp. Enter store details, GSTIN, UPI ID, and bulk upload your catalog via CSV or image scan.</p>
+        </div>
+        <!-- Customer Ordering -->
+        <div class="glass-card step-card">
+          <div class="step-number">2</div>
+          <h3>Customer Instant Ordering</h3>
+          <p>Customers text your bot to search products via text or product photos. AI vector search finds exact catalog matches instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive WhatsApp Chat Simulator Section -->
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Experience the WhatsApp Simulator</h2>
+        <p>Click the buttons below to see how buyers interact with your automated store!</p>
+      </div>
+
+      <div class="simulator-container">
+        <div class="sim-header">
+          <div class="sim-avatar">BB</div>
+          <div class="sim-info">
+            <h4>BillBot Official Store</h4>
+            <p>Online • Automated Bot</p>
+          </div>
+        </div>
+        <div class="sim-chat" id="simChat">
+          <div class="chat-bubble chat-incoming">
+            👋 Welcome to <strong>BillBot Store</strong>! Reply with:<br>
+            1️⃣ View Catalog<br>
+            2️⃣ Check Order Status<br>
+            Or send a product photo!
+          </div>
+        </div>
+        <div class="sim-actions">
+          <button class="sim-btn" id="btnCatalog">1️⃣ Show Catalog</button>
+          <button class="sim-btn" id="btnOrder">📦 Place Order</button>
+          <button class="sim-btn" id="btnInvoice">📄 Get Invoice</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Enterprise-Grade Features</h2>
+        <p>Built on Cloudflare edge computing for 0ms cold starts and 99.99% uptime.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card step-card">
+          <h3>⚡ Cloudflare Edge Speed</h3>
+          <p>Deployed globally across 300+ edge locations for sub-50ms response times.</p>
+        </div>
+        <div class="glass-card step-card">
+          <h3>🧠 AI Vector Catalog Search</h3>
+          <p>Powered by Cloudflare Vectorize & Workers AI for semantic product discovery.</p>
+        </div>
+        <div class="glass-card step-card">
+          <h3>🧾 Instant GST PDF Invoices</h3>
+          <p>Auto-generated GST-compliant invoices stored securely in Cloudflare R2 storage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple, Transparent Pricing</h2>
+        <p>No hidden fees. Scale as your business grows.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Starter Plan -->
+        <div class="glass-card pricing-card">
+          <h3>Starter</h3>
+          <div class="price">₹0 <span>/month</span></div>
+          <p>Perfect for new local merchants</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Up to 50 orders/month</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Basic WhatsApp Catalog</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Meta UPI Payments</li>
+          </ul>
+          <a href="https://wa.me/15556735310?text=HI" class="btn btn-outline" target="_blank">Get Started Free</a>
+        </div>
+
+        <!-- Pro Growth Plan -->
+        <div class="glass-card pricing-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Pro Growth</h3>
+          <div class="price">₹999 <span>/month</span></div>
+          <p>For growing SMBs & wholesalers</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Unlimited Monthly Orders</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AI Vector Image Search</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cloudflare R2 PDF Storage</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Automated Reorder Reminders</li>
+          </ul>
+          <a href="https://wa.me/15556735310?text=HI" class="btn btn-primary" target="_blank">Upgrade to Pro</a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="glass-card pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <p>For multi-branch retail networks</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Dedicated D1 Database</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Custom ERP Integration</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 24/7 Dedicated SLA Support</li>
+          </ul>
+          <a href="https://wa.me/15556735310?text=ENTERPRISE" class="btn btn-outline" target="_blank">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Compliance Section -->
+  <section id="security" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Bank-Grade Security & Privacy</h2>
+        <p>Built with AES-256 PII encryption and HMAC SHA-256 Meta Webhook validation.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-card step-card">
+          <h3>🔒 Zero PII Data Exposure</h3>
+          <p>Merchant phone numbers, GSTIN, and customer addresses are encrypted at rest using AES-256-GCM before database storage.</p>
+        </div>
+        <div class="glass-card step-card">
+          <h3>🛡️ HMAC SHA-256 Webhook Security</h3>
+          <p>Every payload received from Meta is verified against cryptographic signature headers, protecting against spoofing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 2.17.69 4.19 1.86 5.85L2.5 21.5l3.8-1.32C7.9 21.34 9.88 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+            </svg>
+            BillBot India
+          </a>
+          <p>Complete B2B2C WhatsApp Bot Commerce & Automated GST Invoicing Platform on Cloudflare Workers.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#demo">Live Demo</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Security</h4>
+          <ul>
+            <li><a href="#security">AES-256 PII Encryption</a></li>
+            <li><a href="#security">HMAC SHA-256 Signatures</a></li>
+            <li><a href="#security">GST Compliance</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/shuvajithalder/BillBot_India" target="_blank">GitHub Repository</a></li>
+            <li><a href="https://wa.me/15556735310?text=HI" target="_blank">WhatsApp Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 BillBot India. All rights reserved. Deployed on Cloudflare Workers edge network.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
